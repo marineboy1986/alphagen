@@ -1,3 +1,5 @@
+#%%
+
 import numpy as np
 
 from alphagen.data.expression import *
@@ -10,7 +12,7 @@ from alphagen.utils import reseed_everything
 from alphagen_generic.operators import funcs as generic_funcs
 from alphagen_generic.features import *
 
-
+#%%
 
 funcs = {func.name: Token(complexity=1, **func._asdict()) for func in generic_funcs}
 for i, feature in enumerate(['open', 'close', 'high', 'low', 'volume', 'vwap']):

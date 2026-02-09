@@ -1,3 +1,4 @@
+#%%
 import json
 import os
 from typing import Optional, Tuple, List
@@ -23,7 +24,7 @@ from alphagen_llm.client import ChatClient, OpenAIClient, ChatConfig
 from alphagen_llm.prompts.system_prompt import EXPLAIN_WITH_TEXT_DESC
 from alphagen_llm.prompts.interaction import InterativeSession, DefaultInteraction
 
-
+#%%
 def read_alphagpt_init_pool(seed: int) -> List[Expression]:
     DIR = "./out/llm-tests/interaction"
     parser = build_parser()

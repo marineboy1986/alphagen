@@ -22,6 +22,7 @@ from alphagen_qlib.calculator import QLibStockDataCalculator
 from alphagen_qlib.utils import load_alpha_pool_by_path
 
 #%%
+
 _T = TypeVar("_T")
 
 
@@ -147,6 +148,7 @@ class QlibBacktest:
             excess_max_drawdown=loc(excess, "max_drawdown"),
         )
 
+#%%
 
 if __name__ == "__main__":
     initialize_qlib("~/.qlib/qlib_data/cn_data")
@@ -184,3 +186,5 @@ if __name__ == "__main__":
             report = json.load(f)
         state = report[-1]["pool_state"]
         run_backtest("pure_llm", run, [parse_expression(t[0]) for t in state], [t[1] for t in state])
+
+# %%

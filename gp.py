@@ -1,3 +1,4 @@
+#%%
 import json
 import os
 from collections import Counter
@@ -16,6 +17,7 @@ from gplearn.fitness import make_fitness
 from gplearn.functions import make_function
 from gplearn.genetic import SymbolicRegressor
 
+#%%
 
 funcs = [make_function(**func._asdict()) for func in generic_funcs]
 
